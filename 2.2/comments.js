@@ -1,3 +1,4 @@
+"use strict";
 //single line comments
 
 /*Multi

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        //The postfix and prefix forms
+        let a = 1, b = 1;
+        
+        let c = ++a; // c = 2 
+                     // a = 2
+        let d = b++; // d = 1
+                     // b = 2
+
+
+        //Assignment result
+        let a = 2;
+        let x = 1 + (a *= 2); /* 1 + (a = a * 2)
+                                1 + (4)
+                                a = 4
+                                x = 5 */
+
+        
+        //Type Conversions 
+        "" + 1 + 0 // "10"
+        "" - 1 + 0 // -1
+        true + false // 1
+        6 / "3" // 2
+        "2" * "3" // 6
+        4 + 5 + "px" // "9px"  
+        "$" + 4 + 5 // "$45"
+        "4" - 2 // 2 
+        "4px" - 2 // NaN
+        7 / 0 // Infinity 
+        " -9 " + 5 // "-9 5"
+        " -9 " - 5 // -14
+        null + 1 // 1
+        undefined + 1 // NaN
+        " \t \n" - 2 // -2
+
+
+        //Fix the addition
+        let a = prompt("First number?", 1);
+        let b = prompt("Second number?", 2);
+
+        alert(a+b); //the output is 12 here b/c it's two strings and the comma throws away the first part so they are concatenated together
+
+        //to fix
+        let a = prompt("First number?", 1);
+        let b = prompt("Second number?", 2);
+
+        alert(+a + +b); //3 
+
+    </script>
+        
+</body>
+</html>

@@ -1,3 +1,4 @@
+"use strict";
 //working with variables
 "use strict";
 let name = "John"; 
