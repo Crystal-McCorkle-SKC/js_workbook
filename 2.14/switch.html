@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+    //Rewrite the "switch" into an if..else statement
+    switch (browser) {
+        case "Edge":
+            alert ("You've got the Edge!");
+            break;
+        
+        case "Chrome":
+        case "Firefox":
+        case "Safari":
+        case "Opera":
+            alert ("Okay we support these browsers too");
+            break;
+        
+        default: 
+            alert ("We hope that this page looks ok!");
+    }
+
+    //rewritten code below:
+    let browser = ["Chrome" , "Firefox", "Safari", "Opera", "Edge"];
+
+    if (browser === [4]) {
+        alert ("You've got the Edge!");
+    }   else if (browser === [0] || [1] || [2] || [3]) {
+        alert ("Okay we support these browsers too");
+    }   else {
+        alert ("We hope that this page looks ok!");
+    }
+
+    //would my code above even work w/ the info in an array?! help!! both the original code 
+    //and my code give the same message in the console
+
+    //The below is the book's solution:
+    if (browser == "Edge") {
+        alert ("You've got the Edge!");
+    }   else if (browser == "Chrome"
+        || browser == "Firefox"
+        || browser == "Safari"
+        || browser == "Opera") {
+            alert ("Okay we support these browsers too");
+        } else {
+            alert ("We hope that ths page looks ok!");
+        }
+
+        //Rewrite if into switch
+        //Rewrite the code below using a single switch statement
+        let a = +prompt ("a?" , "");
+        if (a == 0) {
+            alert (0);
+        }
+        if (a == 1) {
+            alert (1);
+        }
+        if (a == 2 || a == 3) {
+            alert ("2, 3");
+        }
+
+        //rewritten into a switch statement
+        let a = +prompt ("a?" , "");
+
+        switch (a) {
+            case 0: 
+                alert(0);
+                break;
+            case 1:
+                alert (1);
+                break;
+            case 2:
+            case 3: 
+                alert ("2, 3");
+                break;
+        }
+    
+    
+
+    </script>
+</body>
+</html>

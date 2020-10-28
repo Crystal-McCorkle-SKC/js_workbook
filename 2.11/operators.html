@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        //what is the result of OR?
+        alert (null || 2 || undefined); //2
+
+        //What's the result of OR'ed alerts?
+        alert( alert(1) || 2 || alert(3) ); //alert 1, then 2 
+
+        //What is the result of AND?
+        alert( 1 && null && 2); //null (first falsy value)
+
+        //What is the result of AND'ed alerts?
+        alert (alert (1) && alert(2)); // 1 and then undefined 
+
+        //The result of OR AND OR
+        alert (null || 2 && 3 || 4); //3--&& has highter precedence, so out of 2 && 3, 3 wins
+                                     //then expression is null || 3 || 4 = 3 (first truthy value)
+
+        //Check the range between
+        //write an if condition to check that age is between 14 and 90
+        if (age >= 14 && age <= 90);
+
+        //Check the range outside
+        //first one using !NOT
+        if (!(age >= 14 && age <= 90)); 
+        //second, not using !NOT
+        if (age < 14 || age > 90);
+
+        //A question about "if"
+        if (-1 || 0) alert( 'first' );
+        if (-1 && 0) alert( 'second' );
+        if (null || -1 && 1) alert( 'third' );
+        //the first and third equations will execute 
+
+        //Check the login 
+        let userName = prompt("Who's there?", '');
+
+        if (userName === 'Admin') {
+
+            let pass = prompt('Password?', '');
+
+            if (pass === 'TheMaster') {
+                alert( 'Welcome!' );
+            } else if (pass === '' || pass === null) {
+                alert( 'Canceled' );
+            } else {
+                alert( 'Wrong password' );
+            }
+
+        } else if (userName === '' || userName === null) {
+            alert( 'Canceled' );
+        } else {
+            alert( "I don't know you" );
+        }
+
+   
+
+
+    </script>
+</body>
+</html>

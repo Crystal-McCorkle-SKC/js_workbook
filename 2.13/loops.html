@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        //Last loop value
+        //What is the last value alerted by this code? Why? 
+        let i = 3; 
+        while (i) {
+            alert (i--);
+        }
+        // 1, iterates through the loop: 3, 2, 1
+
+        //Which values does the while loop show? 
+        1. prefix form 
+        let i = 0;
+        while (++i < 5) alert (i);
+        // 1, 2, 3, 4 
+
+        2. postfix form 
+        let i = 0;
+        while (i++ < 5) alert (i);
+        //1, 2, 3, 4, 5
+
+        //Which values get shown by the "for" loop? 
+        1. postfix form:
+        for (let i = 0; i < 5; i++) alert (i);
+        //0, 1, 2, 3, 4
+        2. prefix form: 
+        for (let i = 0; i < 5; ++i) alert (i);
+        //0, 1, 2, 3, 4 
+
+        //Output even numbers in the loop 
+        //Use for loop to output even numbers from 2 to 10
+
+        for (let i = 2; i <11; i++) {
+            if (i % 2 === 0) {
+                alert(i);
+            }
+        }
+
+        //Replace "for" with "while"
+        //Rewrite the code changing the for loop to while w/o altering its behavior 
+        //Output should be the same 
+        for (let i= 0; i < 3; i++) {
+            alert( `number ${i}!` );
+        }
+
+        //changed to a while loop: 
+        let i= 0
+        while ( i < 3) {
+            alert( `number ${i}!` );
+            i++;
+        }
+
+        //Repeat until the input is correct
+        //Write a loop which prompts for a number greater than 100
+        //If visitor enters another number, ask them to input again
+        //Loop must ask for a number until either the visitor enters a number
+        //greater than 100 or cancels the input/enters an empty line 
+
+        while (true) {
+            let value = prompt("Please enter a number greater than 100", "");
+            if (!value || value>= 100) {
+                break;
+            }
+        }
+
+        //JS workbook solution is below 
+
+        let num;
+
+        do {
+            num = prompt("Please enter a number greater than 100", 0);
+        }   while (num <= 100 && num);
+
+
+        //Output prime numbers
+        //Code should output prime nunbers in the interval from 2 to n
+
+        let n = 10;
+        nextPrime: 
+        for (let i = 2; i <= n; i++) {
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) continue nextPrime;
+            }
+        alert (i);
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
