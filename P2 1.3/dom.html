@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--dom children--look at the example and answer one way of how to access each item -->
+        <div> The div DOM mode </div>
+            <ul> The ul DOM mode </ul>
+            <li> The li w/ Pete DOM mode </li>
+    <script>
+        "use strict";
+        //div:
+        document.body.firstElementChild
+        //ul:
+        document.body.lastElementChild
+        //li:
+        document.body.lastElementChild.lastElementChild
+
+        //The sibling question
+        //Is it true that elem.lastChild.nextSibling is always null? 
+        //answer: yes, lastChild is ALWAYS the last one (NO nextSibling)
+        //Is it true that elem.children[0].previousSibling is always null?
+        //answer: No
+
+
+        //Select all diagonal cells 
+        //Write the code to paint all diagonal table cells in red 
+        //START HERE on THURSDAY!!
+
+        
+    </script>
+    
+</body>
+</html>
