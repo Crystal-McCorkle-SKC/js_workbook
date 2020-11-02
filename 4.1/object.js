@@ -61,3 +61,19 @@ function multiplyNumeric (menu) {
         } 
     }
 }
+
+//answer:
+//create function
+function multiplyNumeric(obj) {
+  //use a for let in loop to loop through the keys in the object
+  for (let key in obj) {
+    //if the typeof the key in the object is equal to a number
+    if (typeof obj[key] == 'number') {
+      //take the value in the object and multiple by 2
+      obj[key] *= 2;
+    }
+  }
+}
+
+multiplyNumeric(menu);
+console.log(menu);
